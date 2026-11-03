@@ -41,6 +41,30 @@ offers Lapwing too. Lapwing's inflected forms (such as `accorded` and `arranging
 `.modal` rule files, which this app can't read, so those words aren't in the Lapwing word list.
 About 11% of the words Plover covers are missing from it.
 
+## Theories: Lyk
+
+Lyk is [noahlyk's own theory](https://github.com/noahlyk/lyk-steno-theory), and it is in the Theory
+dropdown too. It uses the same 23 keys, so the layout, the unlock order and the keyboard diagram
+are unchanged; only the words and the strokes that write them differ.
+
+Its data is committed in `public/data/lyk/` (so GitHub Pages serves it as it is) and is built from
+the files `cargo run --release -- build` writes in the lyk-steno-theory repo:
+
+```sh
+node scripts/build-theory.js lyk                      # reads ../lyk-steno-theory/out/lyk
+node scripts/build-theory.js lyk <folder with 02-lyk-*.json>
+```
+
+- **Single strokes only.** Lyk writes a word that does not fit one stroke with a join key (`+`), a
+  24th key this page has no place for. Those outlines are left out, so the lessons use the 31,000
+  words Lyk writes in one stroke.
+- **The lesson shows a word's primary outline** (`THEZ` for `these`). The extra and backup
+  one-stroke spellings Lyk has for a word still count as right if you type them.
+- **No suffix strokes yet.** Lyk's `-ing`, `-ed` and the rest are join-key strokes, so a word plus a
+  suffix is not accepted the way it is in Plover and Lapwing.
+- **Phrases and the join key are a later step.** A phrase like `in the` is one stroke, but the
+  lessons are built around single words.
+
 ## Hosting it statically (e.g. GitHub Pages)
 
 `public/` is already a complete static site — `server.js` only adds a place to save progress

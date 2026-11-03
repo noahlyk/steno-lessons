@@ -87,12 +87,13 @@
   // starts on a QWERTY key shows QWERTY, one that starts on the machine shows the Uni v4.
 
   // Which steno theory the lessons use. Each one has its own folder of data: Plover's sits at
-  // data/, Lapwing's under data/lapwing/ (built by scripts/build-theory.js). Saved in this
+  // data/, Lapwing's under data/lapwing/ and Lyk's under data/lyk/ (built by scripts/build-theory.js). Saved in this
   // browser; switching reloads the page so the lessons start from the new word list.
   const THEORY_KEY = "steno-lessions.theory";
   const THEORIES = {
     plover: { label: "Plover", dir: "data/" },
     lapwing: { label: "Lapwing", dir: "data/lapwing/" },
+    lyk: { label: "Lyk", dir: "data/lyk/" },
   };
   function readTheory() {
     try {
