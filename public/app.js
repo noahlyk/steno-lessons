@@ -1099,7 +1099,7 @@
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
     } catch (error) {
       console.error('could not save progress', error);
-      setFeedback('Progress could not be saved. Is the steno-lessions server still running?', 'bad');
+      setFeedback('Progress could not be saved. Is the steno-lessons server still running?', 'bad');
     }
   }
 

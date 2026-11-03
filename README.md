@@ -1,6 +1,6 @@
-# [▶ Open steno-lessions](https://noahlyk.github.io/steno-lessions/)
+# [▶ Open steno-lessons](https://noahlyk.github.io/steno-lessons/)
 
-*A fork of [steno-lessions](https://github.com/noahlyk/steno-lessions) by noahlyk — this fork adds [Uni v4](https://stenokeyboards.com/products/the-uni-v4) machine support: a diagram of the board and real input over WebHID (Plover HID), alongside the original QWERTY typing. See [the design doc](docs/superpowers/specs/2026-10-26-uni-v4-design.md).*
+*A fork of [steno-lessons](https://github.com/noahlyk/steno-lessons) by noahlyk — this fork adds [Uni v4](https://stenokeyboards.com/products/the-uni-v4) machine support: a diagram of the board and real input over WebHID (Plover HID), alongside the original QWERTY typing. See [the design doc](docs/superpowers/specs/2026-10-26-uni-v4-design.md).*
 
 Learn steno one key at a time, the way keybr and monkeytype teach typing. You type on your normal keyboard. The page turns your key presses into steno strokes, and the keyboard shows which keys are steno keys and what sound each one makes.
 
@@ -20,7 +20,7 @@ Settings come from environment variables:
 
 | Variable | Default | What it does |
 | --- | --- | --- |
-| `STENO_LESSIONS_DATA` | `progress.json` in the project folder (git-ignored) | Where progress is saved |
+| `STENO_LESSONS_DATA` | `progress.json` in the project folder (git-ignored) | Where progress is saved |
 | `PORT` | `4321` | Port to listen on |
 
 ## Theories: Plover and Lapwing

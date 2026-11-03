@@ -6,9 +6,9 @@ const path = require('node:path');
 const http = require('node:http');
 
 // The server reads its settings when it loads, so point them at a fixture first.
-const dir = fs.mkdtempSync(path.join(process.env.CLAUDE_JOB_DIR ? path.join(process.env.CLAUDE_JOB_DIR, 'tmp') : os.tmpdir(), 'steno-lessions-test-'));
+const dir = fs.mkdtempSync(path.join(process.env.CLAUDE_JOB_DIR ? path.join(process.env.CLAUDE_JOB_DIR, 'tmp') : os.tmpdir(), 'steno-lessons-test-'));
 fs.mkdirSync(dir, { recursive: true });
-process.env.STENO_LESSIONS_DATA = path.join(dir, 'progress.json');
+process.env.STENO_LESSONS_DATA = path.join(dir, 'progress.json');
 
 const { handle } = require('../server.js');
 
@@ -59,7 +59,7 @@ test('PUT /api/progress rejects bad JSON', async () => {
 test('serves the page and refuses paths outside public/', async () => {
   const page = await fetch(`${base}/`);
   assert.equal(page.status, 200);
-  assert.match(await page.text(), /steno-lessions/);
+  assert.match(await page.text(), /steno-lessons/);
 
   const escape = await fetch(`${base}/..%2Fserver.js`);
   assert.equal(escape.status, 404);

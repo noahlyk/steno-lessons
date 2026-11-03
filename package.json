@@ -1,5 +1,5 @@
 {
-  "name": "steno-lessions",
+  "name": "steno-lessons",
   "version": "0.2.0",
   "private": true,
   "description": "Learn steno one key at a time on a QWERTY keyboard, with a hardcoded layout and dictionary",
